@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+</head>
+<body>
+  <h1>Register</h1>
+  <form action="/register" method="post">
+    <label for="id">Username:</label><br>
+    <input type="text" Username="Username" name="Username"><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="Password"><br>
+    <label for="confirmPassword">Confirm Password:</label><br>
+    <input type="password" id="confirmPassword" name="confirmPassword"><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br>
+    <label for="phone">Phone:</label><br>
+    <input type="text" id="phone" name="phone"><br><br>
+    <button onclick="clickHandler()">Submit</button>
+
+    <script>
+    function clickHandler() {
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+
+        if (password === confirmPassword) {
+            alert('Passwords match. Submitting form.');
+            document.querySelector('form').submit();
+        } else {
+            alert('Passwords do not match. Please try again.');
+        }
+    }
+    </script>
+</body>
+</html>
