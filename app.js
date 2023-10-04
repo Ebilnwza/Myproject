@@ -9,7 +9,7 @@ const login = require('./Routes/login')
 const register = require('./Routes/register')
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
-app.use('/home',home)
+app.use('/',home)
 app.use('/createPost',Post)
 app.use('/register',register);
 app.use('/login',login);

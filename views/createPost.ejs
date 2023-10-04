@@ -95,16 +95,15 @@
   </header>
 
   <nav>
-    <a href="/home/<%= id %>">หน้าหลัก</a>
-    <a href="/createPost/<%= id %>">สร้างโพสต์ใหม่</a>
-    <a href="/login">เข้าสู่ระบบ</a>
-    <a href="/register">สมัครสมาชิก</a>
+    <a href="./">หน้าหลัก</a>
+    <a href="./createPost">สร้างโพสต์ใหม่</a>
+    <a href="./login">เข้าสู่ระบบ</a>
+    <a href="./register">สมัครสมาชิก</a>
     <a href="#">ติดต่อเรา</a>
   </nav>
 
   <main>
     <div class="blog-form">
-      <h2>สร้างโพสต์ใหม่โดย <%= data.Username %></h2>
       <form action="/createPost" method="post">
         <label for="title">นามปากกา:</label>
         <input type="text" id="author" name="author" required>
@@ -112,8 +111,6 @@
         <input type="text" id="title" name="title" required>
         <label for="content">Content:</label>
         <textarea id="content" name="content" rows="6" required></textarea>
-          <label for="content">ID ห้ามโลบบบบบ:</label>
-          <textarea id="content" name="id"required><%= id %></textarea>
         <button type="submit">Submit</button>
       </form>
       

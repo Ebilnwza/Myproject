@@ -61,19 +61,20 @@
   </header>
   
   <nav>
-    <a href="/home/<%= id %>">หน้าหลัก</a>
-    <a href="/createPost/<%= id %>">สร้างโพสต์ใหม่</a>
-    <a href="/login">เข้าสู่ระบบ</a>
-    <a href="/register">สมัครสมาชิก</a>
+    <a href="./">หน้าหลัก</a>
+    <a href="./createPost">สร้างโพสต์ใหม่</a>
+    <a href="./login">เข้าสู่ระบบ</a>
+    <a href="./register">สมัครสมาชิก</a>
     <a href="#">ติดต่อเรา</a>
   </nav>
-<h1>ยินดีต้อนรับคุณ <%= name %></h1>
   <main>
     <article>
       <% data.forEach(data => { %>
-        <h2>ID Post : <%= data.id %></h2>
+        <p>ID Post : <%= data.id %></p>
+        <p>หัวข้อ : <%= data.title %></p>
         <p>นามปากกา : <%= data.author %></p>
         <p>เนื้อหา :<%= data.content %></p>
+        <hr>
     <% }) %>    
     </article>
   </main>
